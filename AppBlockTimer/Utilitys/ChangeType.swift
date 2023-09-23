@@ -1,5 +1,5 @@
 //
-//  Utility.swift
+//  ChangeType.swift
 //  AppBlockTimer
 //
 //  Created by Genki on 9/23/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Utility {
+class ChangeType {
     
     static func intToTimeLabel(_ result: Int) -> String {
         let seconds = String(result % 60)

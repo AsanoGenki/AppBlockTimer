@@ -30,7 +30,7 @@ struct TimerLabelView: View {
         } 
         
         else {
-            Text(Utility.intToTimeLabel(result))
+            Text(ChangeType.intToTimeLabel(result))
                 .font(.system(size: 52).monospacedDigit())
                 .foregroundColor(.blue)
         }
