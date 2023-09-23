@@ -22,6 +22,7 @@ struct TimerView: View {
                 VStack {
                     Spacer()
                     TimeSliderView(offset: $offset, minute: $minute)
+                        .opacity(timerViewModel.result == 0 ? 1 : 0)
                     
                     BottomButtonView(timerViewModel: timerViewModel, result: $timerViewModel.result, minute: $minute, offset: $offset)
                     
