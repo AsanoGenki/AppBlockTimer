@@ -14,7 +14,7 @@ class Utility {
         let minutes = String((result / 60) % 60)
         let hours = String(result / 3600)
         let minuteStamp = minutes.count > 1 ? minutes : "0" + minutes
-        let hoursStamp = hours.count > 1 ? hours : "0" + hours
+        let hoursStamp = hours.count > 1 ? hours : "" + hours
         let secondsStamp = String(seconds.count > 1 ? seconds : "0" + seconds)
         
         if result / 3600 < 1 {
