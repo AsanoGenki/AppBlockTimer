@@ -52,9 +52,9 @@ class TimerViewModel: ObservableObject {
 
     func stop() {
         timer?.cancel()
-        timer = nil
         model.startTime = nil
         saveStartTime()
+        result = 0
     }
 
     private func saveStartTime() {
