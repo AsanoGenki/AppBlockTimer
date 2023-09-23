@@ -12,37 +12,22 @@ struct TimerView: View {
     @AppStorage("setMinute") var setMinute = 0
     
     @State var minute = 0
+    @State var offset: CGFloat = 0
     
     var body: some View {
-        //タイマーが適切に機能するかテストするためのビュー
-        VStack {
-            if timerViewModel.result == 0 {
-                Picker("Number of people", selection: $minute) {
-                        ForEach(1 ..< 100) {
-                            Text("\($0) minutes").tag($0)
-                        }
-                    }
-                .pickerStyle(WheelPickerStyle())
+        NavigationView{
+            ZStack {
+                TimerLabelView(offset: $offset, result: $timerViewModel.result)
                 
-                Text("Start")
-                    .onTapGesture {
-                        setMinute = minute
-                        timerViewModel.start(minutes: setMinute)
-                    }
-            }
-            else {
-                Text(Utility.intToTimeLabel(Int(timerViewModel.result)))
-                    .font(.system(size: 52).monospacedDigit())
-                    .foregroundColor(.blue)
-                
-                Text("Stop")
-                    .onTapGesture {
-                        timerViewModel.stop()
-                    }
-                
+                VStack {
+                    Spacer()
+                    TimeSliderView(offset: $offset, minute: $minute)
+                    
+                    BottomButtonView(timerViewModel: timerViewModel, result: $timerViewModel.result, minute: $minute, offset: $offset)
+                    
+                }
             }
         }
-        .padding()
     }
 }
 
