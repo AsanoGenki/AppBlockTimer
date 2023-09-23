@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct AppBlockTimerApp: App {
+    @AppStorage("setMinute") var setMinute = 0
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TimerView(timerViewModel: TimerViewModel(model: TimerModel(minutes: setMinute)))
         }
     }
 }
