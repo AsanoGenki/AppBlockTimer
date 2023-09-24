@@ -19,4 +19,12 @@ class AppBlockViewModel: ObservableObject {
     func unBlockApp() {
         model.unBlockApp()
     }
+    
+    func denyAppRemoval() {
+        model.denyAppRemoval()
+    }
+    
+    func undenyAppRemoval() {
+        model.undenyAppRemoval()
+    }
 }

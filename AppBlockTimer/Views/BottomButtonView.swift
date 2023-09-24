@@ -58,6 +58,10 @@ struct BottomButtonView: View {
                         timerViewModel.start(minutes: setMinute)
                         //アプリを制限する
                         appBlockViewModel.blockApp()
+                        //strictLevelが3の場合、アプリの削除を制限する
+                        if strictLevel == 3 {
+                            appBlockViewModel.denyAppRemoval()
+                        }
                     }
                     .padding(.vertical, 30)
                     .padding(.horizontal, 10)

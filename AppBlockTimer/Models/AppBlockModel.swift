@@ -19,4 +19,12 @@ class AppBlockModel: ObservableObject {
     func unBlockApp() {
         ManagedSettingsStore(named: ManagedSettingsStore.Name("AppBlockTimer")).clearAllSettings()
     }
+    
+    func denyAppRemoval() {
+        ManagedSettingsStore(named: ManagedSettingsStore.Name("AppBlockTimer")).application.denyAppRemoval = true
+    }
+    
+    func undenyAppRemoval() {
+        ManagedSettingsStore(named: ManagedSettingsStore.Name("AppBlockTimer")).application.denyAppRemoval = false
+    }
 }

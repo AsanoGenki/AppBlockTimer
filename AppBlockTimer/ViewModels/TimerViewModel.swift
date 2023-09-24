@@ -13,6 +13,7 @@ class TimerViewModel: ObservableObject {
     @Published var result = 0
     
     @AppStorage("setMinute") var setMinute = 0
+    @AppStorage("strictLevel") var strictLevel = 1
 
     private var timer: AnyCancellable?
     
@@ -61,6 +62,8 @@ class TimerViewModel: ObservableObject {
         result = 0
         //アプリ制限を解除する
         appBlockModel.unBlockApp()
+        //strictLevelが3の場合、アプリの削除制限を解除する
+        appBlockModel.undenyAppRemoval()
     }
 
     private func saveStartTime() {
