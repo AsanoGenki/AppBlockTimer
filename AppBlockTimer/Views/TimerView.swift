@@ -11,7 +11,7 @@ struct TimerView: View {
     @ObservedObject var timerViewModel: TimerViewModel
     @AppStorage("setMinute") var setMinute = 0
     
-    @State var minute = 0
+    @State var minute = 15 //タイマーの最小時間が15分
     @State var offset: CGFloat = 0
     
     var body: some View {
