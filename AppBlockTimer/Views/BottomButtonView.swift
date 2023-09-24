@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import FamilyControls
 
 struct BottomButtonView: View {
     @ObservedObject var timerViewModel: TimerViewModel
     @AppStorage("setMinute") var setMinute = 0
+    @AppStorage("blockAppSelecton") var blockAppSelecton = FamilyActivitySelection()
+    
+    @State private var isShowingAppPicker = false
     
     @Binding var result: Int
     @Binding var minute: Int
@@ -22,8 +26,12 @@ struct BottomButtonView: View {
             HStack {
                 Image(systemName: "square.stack.3d.up.fill")
                 
-                Text("0")
-            }.foregroundColor(.blue)
+                Text(String(blockAppSelecton.applications.count))
+            }
+            .foregroundColor(.blue)
+            .onTapGesture {
+                isShowingAppPicker.toggle()
+            }
             
             Spacer()
             
@@ -68,6 +76,7 @@ struct BottomButtonView: View {
             
             Spacer()
         }
+        .familyActivityPicker(isPresented: $isShowingAppPicker, selection: $blockAppSelecton)
     }
 }
 

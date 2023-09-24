@@ -1,0 +1,30 @@
+//
+//  FamilyActivitySelectionExtension.swift
+//  AppBlockTimer
+//
+//  Created by Genki on 9/24/23.
+//
+
+import SwiftUI
+import FamilyControls
+
+//FamilyActivitySelectionをAppStorageで管理可能にする
+extension FamilyActivitySelection: RawRepresentable {
+    public init?(rawValue: String) {
+        guard let data = rawValue.data(using: .utf8),
+            let result = try? JSONDecoder().decode(FamilyActivitySelection.self, from: data)
+        else {
+            return nil
+        }
+        self = result
+    }
+
+    public var rawValue: String {
+        guard let data = try? JSONEncoder().encode(self),
+            let result = String(data: data, encoding: .utf8)
+        else {
+            return "[]"
+        }
+        return result
+    }
+}
