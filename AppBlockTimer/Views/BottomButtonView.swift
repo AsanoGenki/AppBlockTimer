@@ -10,6 +10,8 @@ import FamilyControls
 
 struct BottomButtonView: View {
     @ObservedObject var timerViewModel: TimerViewModel
+    @ObservedObject var appBlockViewModel: AppBlockViewModel
+    
     @AppStorage("setMinute") var setMinute = 0
     @AppStorage("blockAppSelecton") var blockAppSelecton = FamilyActivitySelection()
     
@@ -47,7 +49,10 @@ struct BottomButtonView: View {
                     )
                     .onTapGesture {
                         setMinute = minute
+                        //タイマーを開始する
                         timerViewModel.start(minutes: setMinute)
+                        //アプリを制限する
+                        appBlockViewModel.blockApp()
                     }
                     .padding(.vertical, 30)
                     .padding(.horizontal, 10)
@@ -86,6 +91,6 @@ struct BottomButtonView_Previews: PreviewProvider {
     @State static var offset: CGFloat = 0
     
     static var previews: some View {
-        BottomButtonView(timerViewModel: TimerViewModel(model: TimerModel(minutes: 0)), result: $result, minute: $minute, offset: $offset)
+        BottomButtonView(timerViewModel: TimerViewModel(model: TimerModel(minutes: 0)), appBlockViewModel: AppBlockViewModel(), result: $result, minute: $minute, offset: $offset)
     }
 }

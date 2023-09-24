@@ -15,6 +15,8 @@ class TimerViewModel: ObservableObject {
     @AppStorage("setMinute") var setMinute = 0
 
     private var timer: AnyCancellable?
+    
+    var appBlockModel: AppBlockModel = AppBlockModel()
 
     init(model: TimerModel) {
         self.model = model
@@ -57,6 +59,8 @@ class TimerViewModel: ObservableObject {
         model.startTime = nil
         saveStartTime()
         result = 0
+        //アプリ制限を解除する
+        appBlockModel.unBlockApp()
     }
 
     private func saveStartTime() {
