@@ -18,68 +18,11 @@ struct SelectLevelView: View {
                 Spacer()
             }.padding(.leading, 15)
             
-            HStack{
-                Image("emoji_level1")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding(.leading, 20)
-                VStack(alignment: .leading, spacing: 5){
-                    Text("Level 1")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.green)
-                        .padding(.top, 10)
-                    Text("You can stop timer.")
-                        .font(.subheadline)
-                        .padding(.bottom, 10)
-                }
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color("background_gray"))
-            .cornerRadius(14)
-            .padding(.horizontal, 15)
+            SelectLevelRow(levelText: "Level 1", emojiImage: "emoji_level1", color: .green, brief: "You can stop timer.")
             
-            HStack{
-                Image("emoji_level2")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding(.leading, 20)
-                VStack(alignment: .leading, spacing: 5){
-                    Text("Level 2")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(Color("costom_blue"))
-                        .padding(.top, 10)
-                    Text("You can stop timer.")
-                        .font(.subheadline)
-                        .padding(.bottom, 10)
-                }
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color("background_gray"))
-            .cornerRadius(14)
-            .padding(.horizontal, 15)
+            SelectLevelRow(levelText: "Level 2", emojiImage: "emoji_level2", color: Color("costom_blue"), brief: "You can stop timer.")
             
-            HStack{
-                Image("emoji_level3")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding(.leading, 20)
-                VStack(alignment: .leading, spacing: 5){
-                    Text("Level 3")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.orange)
-                        .padding(.top, 10)
-                    Text("You can stop timer.")
-                        .font(.subheadline)
-                        .padding(.bottom, 10)
-                }
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color("background_gray"))
-            .cornerRadius(14)
-            .padding(.horizontal, 15)
+            SelectLevelRow(levelText: "Level 3", emojiImage: "emoji_level3", color: .orange, brief: "You can stop timer.")
         }
     }
 }
