@@ -17,9 +17,16 @@ struct TimerView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                TimerLabelView(offset: $offset, result: $timerViewModel.result)
+                ZStack(alignment: .center){
+                    TimeCircleView(timerViewModel: timerViewModel, result: $timerViewModel.result)
+                    
+                    TimerLabelView(offset: $offset, result: $timerViewModel.result)
+                }
+                .frame(minHeight: 330)
+                .padding(24)
+                .padding(.top, -100)
                 
-                VStack {
+                VStack(spacing: 12) {
                     Spacer()
                     TimeSliderView(offset: $offset, minute: $minute)
                         .opacity(timerViewModel.result == 0 ? 1 : 0)
@@ -28,6 +35,7 @@ struct TimerView: View {
                     
                 }
             }
+            .padding(.bottom, 40)
         }
     }
 }

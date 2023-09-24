@@ -11,6 +11,8 @@ import SwiftUI
 class TimerViewModel: ObservableObject {
     @Published var model: TimerModel
     @Published var result = 0
+    
+    @AppStorage("setMinute") var setMinute = 0
 
     private var timer: AnyCancellable?
 
@@ -68,4 +70,11 @@ class TimerViewModel: ObservableObject {
     private func fetchStartTime() -> Date? {
         UserDefaults.standard.object(forKey: "startTime") as? Date
     }
+    
+    //残り時間を円で表すためのメソッド
+    func elapsedTimeToCircle(_ result: Int) -> Double {
+        let totalTime = setMinute * 60
+        return (Double(totalTime) - Double(result)) / Double(totalTime)
+    }
+    
 }
