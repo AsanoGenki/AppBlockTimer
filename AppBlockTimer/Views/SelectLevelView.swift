@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SelectLevelView: View {
+    @AppStorage("strictLevel") var strictLevel = 1
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack {
             HStack{
@@ -19,10 +22,22 @@ struct SelectLevelView: View {
             }.padding(.leading, 15)
             
             SelectLevelRow(levelText: "Level 1", emojiImage: "emoji_level1", color: .green, brief: "You can stop timer.")
+                .onTapGesture {
+                    strictLevel = 1
+                    dismiss()
+                }
             
-            SelectLevelRow(levelText: "Level 2", emojiImage: "emoji_level2", color: Color("costom_blue"), brief: "You can stop timer.")
+            SelectLevelRow(levelText: "Level 2", emojiImage: "emoji_level2", color: Color("costom_blue"), brief: "You can't stop timer.")
+                .onTapGesture {
+                    strictLevel = 2
+                    dismiss()
+                }
             
-            SelectLevelRow(levelText: "Level 3", emojiImage: "emoji_level3", color: .orange, brief: "You can stop timer.")
+            SelectLevelRow(levelText: "Level 3", emojiImage: "emoji_level3", color: .orange, brief: "You can't stop timer & delete apps.")
+                .onTapGesture {
+                    strictLevel = 3
+                    dismiss()
+                }
         }
     }
 }

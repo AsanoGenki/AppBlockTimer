@@ -34,6 +34,7 @@ struct SelectLevelRow: View {
         .background(Color("background_gray"))
         .cornerRadius(14)
         .padding(.horizontal, 15)
+        .contentShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 

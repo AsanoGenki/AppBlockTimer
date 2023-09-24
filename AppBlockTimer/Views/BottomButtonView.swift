@@ -14,8 +14,10 @@ struct BottomButtonView: View {
     
     @AppStorage("setMinute") var setMinute = 0
     @AppStorage("blockAppSelecton") var blockAppSelecton = FamilyActivitySelection()
+    @AppStorage("strictLevel") var strictLevel = 1
     
     @State private var isShowingAppPicker = false
+    @State private var isShowingLevelSheet = false
     
     @Binding var result: Int
     @Binding var minute: Int
@@ -75,13 +77,36 @@ struct BottomButtonView: View {
             Spacer()
             
             //厳格モードボタン
-            Image("emoji_01")
+            if strictLevel == 1 {
+                Image("emoji_01")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .onTapGesture {
+                        isShowingLevelSheet.toggle()
+                    }
+            } else if strictLevel == 2 {
+                Image("emoji_02")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .onTapGesture {
+                        isShowingLevelSheet.toggle()
+                    }
+            } else {
+                Image("emoji_03")
                 .resizable()
                 .frame(width: 30, height: 30)
+                .onTapGesture {
+                    isShowingLevelSheet.toggle()
+                }
+            }
             
             Spacer()
         }
         .familyActivityPicker(isPresented: $isShowingAppPicker, selection: $blockAppSelecton)
+        .sheet(isPresented: $isShowingLevelSheet) {
+            SelectLevelView()
+                .presentationDetents([ .fraction(0.4)])
+        }
     }
 }
 
