@@ -33,8 +33,11 @@ struct BottomButtonView: View {
                 Text(String(blockAppSelecton.applications.count))
             }
             .foregroundColor(.blue)
+            .opacity(result == 0 ? 1 : 0.6)
             .onTapGesture {
-                isShowingAppPicker.toggle()
+                if result == 0 {
+                    isShowingAppPicker.toggle()
+                }
             }
             
             Spacer()
@@ -81,22 +84,33 @@ struct BottomButtonView: View {
                 Image("emoji_01")
                     .resizable()
                     .frame(width: 30, height: 30)
+                    .opacity(result == 0 ? 1 : 0.6)
                     .onTapGesture {
-                        isShowingLevelSheet.toggle()
+                        if result == 0 {
+                            isShowingLevelSheet.toggle()
+                        }
                     }
             } else if strictLevel == 2 {
                 Image("emoji_02")
                     .resizable()
                     .frame(width: 30, height: 30)
+                    .opacity(result == 0 ? 1 : 0.6)
                     .onTapGesture {
-                        isShowingLevelSheet.toggle()
+                        if result == 0 {
+                            isShowingLevelSheet.toggle()
+                        }
+
                     }
             } else {
                 Image("emoji_03")
                 .resizable()
                 .frame(width: 30, height: 30)
+                .opacity(result == 0 ? 1 : 0.6)
                 .onTapGesture {
-                    isShowingLevelSheet.toggle()
+                    if result == 0 {
+                        isShowingLevelSheet.toggle()
+                    }
+
                 }
             }
             
