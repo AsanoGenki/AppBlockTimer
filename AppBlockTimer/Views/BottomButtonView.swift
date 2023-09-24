@@ -71,8 +71,13 @@ struct BottomButtonView: View {
                             .stroke(Color.blue, lineWidth: 3)
                             .frame(width: 60, height: 60)
                     )
+                //タイマー起動時に厳格レベルが2,3の時、停止ボタンの透明度を変える
+                    .opacity(strictLevel == 1 ? 1 : 0.6)
                     .onTapGesture {
-                        timerViewModel.stop()
+                        //タイマー起動時に厳格レベルが2,3の時、停止ボタンを利用不可にする
+                        if strictLevel == 1 {
+                            timerViewModel.stop()
+                        }
                     }
                     .padding(.vertical, 30)
                     .padding(.horizontal, 10)
@@ -99,19 +104,19 @@ struct BottomButtonView: View {
                         if result == 0 {
                             isShowingLevelSheet.toggle()
                         }
-
+                        
                     }
             } else {
                 Image("emoji_03")
-                .resizable()
-                .frame(width: 30, height: 30)
-                .opacity(result == 0 ? 1 : 0.6)
-                .onTapGesture {
-                    if result == 0 {
-                        isShowingLevelSheet.toggle()
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .opacity(result == 0 ? 1 : 0.6)
+                    .onTapGesture {
+                        if result == 0 {
+                            isShowingLevelSheet.toggle()
+                        }
+                        
                     }
-
-                }
             }
             
             Spacer()
