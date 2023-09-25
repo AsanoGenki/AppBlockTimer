@@ -16,7 +16,6 @@ struct TimerView: View {
     @State var offset: CGFloat = 0
     
     var body: some View {
-        if (authority) {
             NavigationView{
                 ZStack {
                     ZStack(alignment: .center){
@@ -39,9 +38,6 @@ struct TimerView: View {
                 }
                 .padding(.bottom, 40)
             }
-        } else {
-            AuthorizationView()
-        }
     }
 }
 

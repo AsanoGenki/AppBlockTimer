@@ -19,8 +19,7 @@ struct AppBlockTimerApp: App {
     var body: some Scene {
         WindowGroup {
             
-            TimerView(timerViewModel: TimerViewModel(model: TimerModel(minutes: setMinute)))
-            
+            MainView()
                 .onReceive(center.$authorizationStatus) { status in
                     authority = status == .approved
                 }
