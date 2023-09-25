@@ -42,6 +42,14 @@ struct SelectLevelView: View {
     }
 }
 
-#Preview {
-    SelectLevelView()
+struct SelectLevelView_Previews: PreviewProvider {
+    static let language: [String]  = ["en","ja"]
+    
+    static var previews: some View {
+        ForEach(language, id: \.self) { languageID in
+            SelectLevelView()
+                .previewDisplayName("Language(\(languageID))")
+                .environment(\.locale, .init(identifier: languageID))
+        }
+    }
 }

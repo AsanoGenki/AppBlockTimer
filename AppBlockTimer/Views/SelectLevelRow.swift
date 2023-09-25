@@ -20,12 +20,12 @@ struct SelectLevelRow: View {
                 .frame(width: 30, height: 30)
                 .padding(.leading, 20)
             VStack(alignment: .leading, spacing: 5){
-                Text(levelText)
+                Text(LocalizedStringKey(levelText))
                     .font(.title2)
                     .bold()
                     .foregroundColor(color)
                     .padding(.top, 10)
-                Text(brief)
+                Text(LocalizedStringKey(brief))
                     .font(.subheadline)
                     .padding(.bottom, 10)
             }

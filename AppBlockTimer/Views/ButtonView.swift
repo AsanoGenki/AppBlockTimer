@@ -12,7 +12,7 @@ struct ButtonView: View {
     var color: Color
     var body: some View {
             
-            Text(text)
+            Text(LocalizedStringKey(text))
                 .frame(minWidth: 150)
                 .foregroundColor(.white)
                 .font(.system(size: 18))
@@ -25,6 +25,6 @@ struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(text: "テキスト", color: .blue)
+        ButtonView(text: "text", color: .blue)
     }
 }

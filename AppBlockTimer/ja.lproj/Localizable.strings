@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  AppBlockTimer
+
+  Created by Genki on 9/25/23.
+  
+*/
+
+// AuthorizationView
+"Give AppBlockTimer permission to block apps" = "AppBlockTimerに\nアプリをブロックする\n許可を与える";
+"With this permission we can block all the apps" = "この許可を得ることで、お客様が選択した全てのアプリをブロックできます。";
+"Give permission" = "許可を与える";
+
+// SelectLevelView
+"You can stop timer." = "タイマーを停止できます";
+"You can't stop timer." = "タイマーを停止できません";
+"You can't stop timer & delete apps." = "タイマーを停止できない & アプリを削除できない";
+"Strictness" = "厳格レベル";
+"Level 1" = "レベル１";
+"Level 2" = "レベル２";
+"Level 3" = "レベル３";

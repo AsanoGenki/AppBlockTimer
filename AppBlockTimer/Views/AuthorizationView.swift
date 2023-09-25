@@ -58,6 +58,14 @@ struct AuthorizationView: View {
     
 }
 
-#Preview {
-    AuthorizationView()
+struct AuthorizationView_Previews: PreviewProvider {
+    static let language: [String]  = ["en","ja"]
+    
+    static var previews: some View {
+        ForEach(language, id: \.self) { languageID in
+            AuthorizationView()
+                .previewDisplayName("Language(\(languageID))")
+                .environment(\.locale, .init(identifier: languageID))
+        }
+    }
 }
