@@ -13,6 +13,10 @@
 		4A4EC29A2ABFD9E500C8757E /* AppBlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4EC2992ABFD9E500C8757E /* AppBlockModel.swift */; };
 		4A4EC29C2ABFDF7500C8757E /* SelectLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4EC29B2ABFDF7500C8757E /* SelectLevelView.swift */; };
 		4A4EC29E2AC0037600C8757E /* SelectLevelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4EC29D2AC0037600C8757E /* SelectLevelRow.swift */; };
+		4A7409312AC1B1A000469431 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7409302AC1B1A000469431 /* ManagedSettings.framework */; };
+		4A7409332AC1B1A000469431 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7409322AC1B1A000469431 /* ManagedSettingsUI.framework */; };
+		4A7409362AC1B1A000469431 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7409352AC1B1A000469431 /* ShieldConfigurationExtension.swift */; };
+		4A74093B2AC1B1A000469431 /* ShieldConfig.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A74092E2AC1B1A000469431 /* ShieldConfig.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A880FD62AC0613C0047339B /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A880FD52AC0613C0047339B /* AuthorizationView.swift */; };
 		4A880FD82AC063120047339B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A880FD72AC063120047339B /* ButtonView.swift */; };
 		4AD6B8112ABE5AB200E34AD9 /* AppBlockTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD6B8102ABE5AB200E34AD9 /* AppBlockTimerApp.swift */; };
@@ -30,6 +34,30 @@
 		4AED592F2ABECB5F00E48A1D /* BottomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AED592E2ABECB5F00E48A1D /* BottomButtonView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4A7409392AC1B1A000469431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AD6B8052ABE5AB200E34AD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A74092D2AC1B1A000469431;
+			remoteInfo = ShieldConfig;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4A74093F2AC1B1A000469431 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4A74093B2AC1B1A000469431 /* ShieldConfig.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4A4EC2922ABFC0B400C8757E /* TimeCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCircleView.swift; sourceTree = "<group>"; };
 		4A4EC2942ABFD42600C8757E /* FamilyActivitySelectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyActivitySelectionExtension.swift; sourceTree = "<group>"; };
@@ -37,6 +65,12 @@
 		4A4EC2992ABFD9E500C8757E /* AppBlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBlockModel.swift; sourceTree = "<group>"; };
 		4A4EC29B2ABFDF7500C8757E /* SelectLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelView.swift; sourceTree = "<group>"; };
 		4A4EC29D2AC0037600C8757E /* SelectLevelRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelRow.swift; sourceTree = "<group>"; };
+		4A74092E2AC1B1A000469431 /* ShieldConfig.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldConfig.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A7409302AC1B1A000469431 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		4A7409322AC1B1A000469431 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = Library/Frameworks/ManagedSettingsUI.framework; sourceTree = DEVELOPER_DIR; };
+		4A7409352AC1B1A000469431 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		4A7409372AC1B1A000469431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A7409382AC1B1A000469431 /* ShieldConfig.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldConfig.entitlements; sourceTree = "<group>"; };
 		4A880FD52AC0613C0047339B /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		4A880FD72AC063120047339B /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		4AD6B80D2ABE5AB200E34AD9 /* AppBlockTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBlockTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +91,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A74092B2AC1B1A000469431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7409312AC1B1A000469431 /* ManagedSettings.framework in Frameworks */,
+				4A7409332AC1B1A000469431 /* ManagedSettingsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AD6B80A2ABE5AB200E34AD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,10 +118,46 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4A7409292AC1B11100469431 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				4AD6B8122ABE5AB200E34AD9 /* TimerView.swift */,
+				4AED592C2ABEC8DC00E48A1D /* TimerLabelView.swift */,
+				4A4EC2922ABFC0B400C8757E /* TimeCircleView.swift */,
+				4AED592A2ABEBD3000E48A1D /* TimeSliderView.swift */,
+				4AED59282ABEBD0700E48A1D /* CustomSlider.swift */,
+				4AED592E2ABECB5F00E48A1D /* BottomButtonView.swift */,
+				4A4EC29B2ABFDF7500C8757E /* SelectLevelView.swift */,
+				4A4EC29D2AC0037600C8757E /* SelectLevelRow.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		4A74092F2AC1B1A000469431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A7409302AC1B1A000469431 /* ManagedSettings.framework */,
+				4A7409322AC1B1A000469431 /* ManagedSettingsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A7409342AC1B1A000469431 /* ShieldConfig */ = {
+			isa = PBXGroup;
+			children = (
+				4A7409352AC1B1A000469431 /* ShieldConfigurationExtension.swift */,
+				4A7409372AC1B1A000469431 /* Info.plist */,
+				4A7409382AC1B1A000469431 /* ShieldConfig.entitlements */,
+			);
+			path = ShieldConfig;
+			sourceTree = "<group>";
+		};
 		4AD6B8042ABE5AB200E34AD9 = {
 			isa = PBXGroup;
 			children = (
 				4AD6B80F2ABE5AB200E34AD9 /* AppBlockTimer */,
+				4A7409342AC1B1A000469431 /* ShieldConfig */,
+				4A74092F2AC1B1A000469431 /* Frameworks */,
 				4AD6B80E2ABE5AB200E34AD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				4AD6B80D2ABE5AB200E34AD9 /* AppBlockTimer.app */,
+				4A74092E2AC1B1A000469431 /* ShieldConfig.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,15 +201,8 @@
 			children = (
 				4ADDF5C12AC1ABC0000FCF34 /* MainView.swift */,
 				4A880FD52AC0613C0047339B /* AuthorizationView.swift */,
-				4AD6B8122ABE5AB200E34AD9 /* TimerView.swift */,
+				4A7409292AC1B11100469431 /* Timer */,
 				4A880FD72AC063120047339B /* ButtonView.swift */,
-				4AED592C2ABEC8DC00E48A1D /* TimerLabelView.swift */,
-				4A4EC2922ABFC0B400C8757E /* TimeCircleView.swift */,
-				4AED592A2ABEBD3000E48A1D /* TimeSliderView.swift */,
-				4AED59282ABEBD0700E48A1D /* CustomSlider.swift */,
-				4AED592E2ABECB5F00E48A1D /* BottomButtonView.swift */,
-				4A4EC29B2ABFDF7500C8757E /* SelectLevelView.swift */,
-				4A4EC29D2AC0037600C8757E /* SelectLevelRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +236,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4A74092D2AC1B1A000469431 /* ShieldConfig */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A74093C2AC1B1A000469431 /* Build configuration list for PBXNativeTarget "ShieldConfig" */;
+			buildPhases = (
+				4A74092A2AC1B1A000469431 /* Sources */,
+				4A74092B2AC1B1A000469431 /* Frameworks */,
+				4A74092C2AC1B1A000469431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShieldConfig;
+			productName = ShieldConfig;
+			productReference = 4A74092E2AC1B1A000469431 /* ShieldConfig.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4AD6B80C2ABE5AB200E34AD9 /* AppBlockTimer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AD6B81C2ABE5AB300E34AD9 /* Build configuration list for PBXNativeTarget "AppBlockTimer" */;
@@ -170,10 +260,12 @@
 				4AD6B8092ABE5AB200E34AD9 /* Sources */,
 				4AD6B80A2ABE5AB200E34AD9 /* Frameworks */,
 				4AD6B80B2ABE5AB200E34AD9 /* Resources */,
+				4A74093F2AC1B1A000469431 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4A74093A2AC1B1A000469431 /* PBXTargetDependency */,
 			);
 			name = AppBlockTimer;
 			productName = AppBlockTimer;
@@ -190,6 +282,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					4A74092D2AC1B1A000469431 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					4AD6B80C2ABE5AB200E34AD9 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -210,11 +305,19 @@
 			projectRoot = "";
 			targets = (
 				4AD6B80C2ABE5AB200E34AD9 /* AppBlockTimer */,
+				4A74092D2AC1B1A000469431 /* ShieldConfig */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4A74092C2AC1B1A000469431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AD6B80B2ABE5AB200E34AD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +331,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A74092A2AC1B1A000469431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7409362AC1B1A000469431 /* ShieldConfigurationExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AD6B8092ABE5AB200E34AD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +366,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4A74093A2AC1B1A000469431 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A74092D2AC1B1A000469431 /* ShieldConfig */;
+			targetProxy = 4A7409392AC1B1A000469431 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4ADDF5BF2AC192B0000FCF34 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -267,6 +386,63 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4A74093D2AC1B1A000469431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldConfig/ShieldConfig.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4J8L2WD7VW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShieldConfig/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShieldConfig;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asanogenki.AppBlockTimer.ShieldConfig;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A74093E2AC1B1A000469431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldConfig/ShieldConfig.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4J8L2WD7VW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShieldConfig/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShieldConfig;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asanogenki.AppBlockTimer.ShieldConfig;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		4AD6B81A2ABE5AB300E34AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,6 +560,7 @@
 		4AD6B81D2ABE5AB300E34AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppBlockTimer/AppBlockTimer.entitlements;
@@ -424,6 +601,7 @@
 		4AD6B81E2ABE5AB300E34AD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppBlockTimer/AppBlockTimer.entitlements;
@@ -464,6 +642,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A74093C2AC1B1A000469431 /* Build configuration list for PBXNativeTarget "ShieldConfig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A74093D2AC1B1A000469431 /* Debug */,
+				4A74093E2AC1B1A000469431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4AD6B8082ABE5AB200E34AD9 /* Build configuration list for PBXProject "AppBlockTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
