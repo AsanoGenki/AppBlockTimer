@@ -19,3 +19,7 @@
 "Level 1" = "レベル１";
 "Level 2" = "レベル２";
 "Level 3" = "レベル３";
+
+// ShieldConfigurationExtension
+"Blocked by\nAppBlockTimer" = "AppBlockTimerによってブロックされました";
+"Dismiss" = "閉じる";
