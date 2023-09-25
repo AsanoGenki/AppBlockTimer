@@ -128,7 +128,7 @@ struct BottomButtonView: View {
         .familyActivityPicker(isPresented: $isShowingAppPicker, selection: $blockAppSelecton)
         .sheet(isPresented: $isShowingLevelSheet) {
             SelectLevelView()
-                .presentationDetents([ .fraction(0.4)])
+                .presentationDetents([ .fraction(0.45)])
         }
     }
 }
