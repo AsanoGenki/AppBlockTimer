@@ -134,9 +134,7 @@
 				4A4EC2922ABFC0B400C8757E /* TimeCircleView.swift */,
 				4AED592A2ABEBD3000E48A1D /* TimeSliderView.swift */,
 				4AED59282ABEBD0700E48A1D /* CustomSlider.swift */,
-				4AED592E2ABECB5F00E48A1D /* BottomButtonView.swift */,
-				4A4EC29B2ABFDF7500C8757E /* SelectLevelView.swift */,
-				4A4EC29D2AC0037600C8757E /* SelectLevelRow.swift */,
+				4A74096C2AC2718900469431 /* BottomButton */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -159,6 +157,16 @@
 				4A7409512AC1BFF400469431 /* ShieldConfigurationExtension.entitlements */,
 			);
 			path = ShieldConfigurationExtension;
+			sourceTree = "<group>";
+		};
+		4A74096C2AC2718900469431 /* BottomButton */ = {
+			isa = PBXGroup;
+			children = (
+				4AED592E2ABECB5F00E48A1D /* BottomButtonView.swift */,
+				4A4EC29B2ABFDF7500C8757E /* SelectLevelView.swift */,
+				4A4EC29D2AC0037600C8757E /* SelectLevelRow.swift */,
+			);
+			path = BottomButton;
 			sourceTree = "<group>";
 		};
 		4AD6B8042ABE5AB200E34AD9 = {

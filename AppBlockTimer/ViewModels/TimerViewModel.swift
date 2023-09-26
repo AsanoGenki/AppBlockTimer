@@ -13,7 +13,6 @@ class TimerViewModel: ObservableObject {
     @Published var result = 0
     
     @AppStorage("setMinute") var setMinute = 0
-    @AppStorage("strictLevel") var strictLevel = 1
     
     @ObservedObject var notificationViewModel = NotificationViewModel()
 

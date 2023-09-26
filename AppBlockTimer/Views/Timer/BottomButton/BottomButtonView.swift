@@ -21,7 +21,6 @@ struct BottomButtonView: View {
     
     @Binding var result: Int
     @Binding var minute: Int
-    @Binding var offset: CGFloat
     
     var body: some View {
         HStack {
@@ -139,6 +138,6 @@ struct BottomButtonView_Previews: PreviewProvider {
     @State static var offset: CGFloat = 0
     
     static var previews: some View {
-        BottomButtonView(timerViewModel: TimerViewModel(model: TimerModel(minutes: 0)), appBlockViewModel: AppBlockViewModel(), result: $result, minute: $minute, offset: $offset)
+        BottomButtonView(timerViewModel: TimerViewModel(model: TimerModel(minutes: 0)), appBlockViewModel: AppBlockViewModel(), result: $result, minute: $minute)
     }
 }

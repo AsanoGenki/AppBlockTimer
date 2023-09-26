@@ -31,7 +31,7 @@ struct TimerView: View {
                         TimeSliderView(offset: $offset, minute: $minute)
                             .opacity(timerViewModel.result == 0 ? 1 : 0)
                         
-                        BottomButtonView(timerViewModel: timerViewModel, appBlockViewModel: AppBlockViewModel(), result: $timerViewModel.result, minute: $minute, offset: $offset)
+                        BottomButtonView(timerViewModel: timerViewModel, appBlockViewModel: AppBlockViewModel(), result: $timerViewModel.result, minute: $minute)
                         
                     }
                 }
