@@ -15,6 +15,7 @@ struct AppBlockTimerApp: App {
     @AppStorage("setMinute") var setMinute = 0
     @AppStorage("authority") var authority = false
     
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
         WindowGroup {

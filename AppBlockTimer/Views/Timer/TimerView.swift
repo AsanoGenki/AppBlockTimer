@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TimerView: View {
     @ObservedObject var timerViewModel: TimerViewModel
-    @ObservedObject var appBlockViewModel = AppBlockViewModel()
     @AppStorage("authority") var authority = false
     
     @State var minute = 15 //タイマーの最小時間が15分

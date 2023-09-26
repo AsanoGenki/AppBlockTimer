@@ -14,6 +14,8 @@ class TimerViewModel: ObservableObject {
     
     @AppStorage("setMinute") var setMinute = 0
     @AppStorage("strictLevel") var strictLevel = 1
+    
+    @ObservedObject var notificationViewModel = NotificationViewModel()
 
     private var timer: AnyCancellable?
     
@@ -32,12 +34,11 @@ class TimerViewModel: ObservableObject {
         timer?.cancel()
         let seconds = minutes * 60
         let totalTime = Double(seconds)
-
+        notificationViewModel.timerEndNotification(minutes: seconds)
         if model.startTime == nil {
             model.startTime = Date()
             saveStartTime()
         }
-
         timer = Timer
             .publish(every: 1, on: .main, in: .common)
             .autoconnect()
@@ -48,14 +49,25 @@ class TimerViewModel: ObservableObject {
                 let elapsed = now.timeIntervalSince(startTime)
 
                 guard elapsed < totalTime else {
-                    self.stop()
+                    self.end()
                     return
                 }
                 self.result = Int(totalTime - elapsed)
             }
     }
-
+    
+    //ユーザーがボタンでタイマーを停止した時
     func stop() {
+        timer?.cancel()
+        model.startTime = nil
+        saveStartTime()
+        result = 0
+        //予定している通知を停止する
+        notificationViewModel.deletetimerEndNotification()
+    }
+
+    //タイマーが時間切れになった時
+    func end() {
         timer?.cancel()
         model.startTime = nil
         saveStartTime()

@@ -19,6 +19,8 @@
 		4A74095B2AC1C14E00469431 /* ShieldAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A74095A2AC1C14E00469431 /* ShieldAssets.xcassets */; };
 		4A7409652AC1C46A00469431 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7409642AC1C46A00469431 /* ManagedSettingsUI.framework */; };
 		4A7409662AC1CB8200469431 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDF5BF2AC192B0000FCF34 /* Localizable.strings */; };
+		4A7409682AC25C8B00469431 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7409672AC25C8B00469431 /* NotificationViewModel.swift */; };
+		4A74096A2AC2609700469431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7409692AC2609700469431 /* AppDelegate.swift */; };
 		4A880FD62AC0613C0047339B /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A880FD52AC0613C0047339B /* AuthorizationView.swift */; };
 		4A880FD82AC063120047339B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A880FD72AC063120047339B /* ButtonView.swift */; };
 		4AD6B8112ABE5AB200E34AD9 /* AppBlockTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD6B8102ABE5AB200E34AD9 /* AppBlockTimerApp.swift */; };
@@ -74,6 +76,9 @@
 		4A7409512AC1BFF400469431 /* ShieldConfigurationExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldConfigurationExtension.entitlements; sourceTree = "<group>"; };
 		4A74095A2AC1C14E00469431 /* ShieldAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ShieldAssets.xcassets; sourceTree = "<group>"; };
 		4A7409642AC1C46A00469431 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = DEVELOPER_DIR; };
+		4A7409672AC25C8B00469431 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		4A7409692AC2609700469431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A74096B2AC2619F00469431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4A880FD52AC0613C0047339B /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		4A880FD72AC063120047339B /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		4AD6B80D2ABE5AB200E34AD9 /* AppBlockTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBlockTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +183,9 @@
 		4AD6B80F2ABE5AB200E34AD9 /* AppBlockTimer */ = {
 			isa = PBXGroup;
 			children = (
+				4A74096B2AC2619F00469431 /* Info.plist */,
 				4AD6B8102ABE5AB200E34AD9 /* AppBlockTimerApp.swift */,
+				4A7409692AC2609700469431 /* AppDelegate.swift */,
 				4ADDF5BF2AC192B0000FCF34 /* Localizable.strings */,
 				4AED59302ABED26600E48A1D /* Views */,
 				4AED59322ABED34F00E48A1D /* Models */,
@@ -233,6 +240,7 @@
 			children = (
 				4AED59242ABEAE3100E48A1D /* TimerViewModel.swift */,
 				4A4EC2972ABFD7D500C8757E /* AppBlockViewModel.swift */,
+				4A7409672AC25C8B00469431 /* NotificationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -357,6 +365,7 @@
 				4A880FD82AC063120047339B /* ButtonView.swift in Sources */,
 				4A4EC29E2AC0037600C8757E /* SelectLevelRow.swift in Sources */,
 				4A4EC2932ABFC0B400C8757E /* TimeCircleView.swift in Sources */,
+				4A74096A2AC2609700469431 /* AppDelegate.swift in Sources */,
 				4A4EC29A2ABFD9E500C8757E /* AppBlockModel.swift in Sources */,
 				4AED592F2ABECB5F00E48A1D /* BottomButtonView.swift in Sources */,
 				4AED592D2ABEC8DC00E48A1D /* TimerLabelView.swift in Sources */,
@@ -367,6 +376,7 @@
 				4A4EC2982ABFD7D500C8757E /* AppBlockViewModel.swift in Sources */,
 				4AED592B2ABEBD3000E48A1D /* TimeSliderView.swift in Sources */,
 				4A4EC29C2ABFDF7500C8757E /* SelectLevelView.swift in Sources */,
+				4A7409682AC25C8B00469431 /* NotificationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +587,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppBlockTimer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AppBlockTimer;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -619,6 +630,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppBlockTimer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AppBlockTimer;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
