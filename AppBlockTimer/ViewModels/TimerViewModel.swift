@@ -61,6 +61,8 @@ class TimerViewModel: ObservableObject {
         model.startTime = nil
         saveStartTime()
         result = 0
+        //アプリ制限を解除する
+        appBlockModel.unBlockApp()
         //予定している通知を停止する
         notificationViewModel.deletetimerEndNotification()
     }
